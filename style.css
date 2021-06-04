@@ -162,6 +162,18 @@ img.staffImage {
     width: auto;
 }
 
+/* 3.2 Partners */
+img.satbaltyk {
+    display: block;
+    margin: 25px auto;
+    height: 200px;
+    width: auto;
+}
+
+div.partnerDescription {
+    margin: 25px 5px;
+    font-size: 1.6rem;
+}
 
 /* 4. Footer */
 
