@@ -13,6 +13,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+div>* {
+    padding-bottom: 20px;
+}
+
 /*  ======
     1. Navigation
     2. Header
@@ -178,27 +182,27 @@ div.partnerDescription {
 /* 4. Footer */
 
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 0;
-    height: 30vh;
     background-color: #000;
     color: #aaa;
+    padding: 20px;
 }
 
-footer .footerLogo {
+img.footerLogo {
+    display: block;
+    margin: 20px auto;
     height: 50px;
-    width: auto;
-    margin-bottom: 20px;
 }
 
-footer .footerInfo {
+div.footerInfo {
     text-align: center;
-    line-height: 150%;
+}
+
+div.footerInfo p {
+    padding: 0;
+    margin: 0;
 }
 
 footer .myInfo {
     margin-top: 10px;
+    text-align: center;
 }
