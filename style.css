@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*  ======
+    1. Navigation
+    2. Header
+    ======  */
+
+/* 1. Navigation */
+div.navWrapper {
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: .3s;
+}
+
+nav {
+    color: white;
+    transition: .3s;
+}
+
+ul.nav {
+    display: flex;
+    flex-grow: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    background-color: black;
+}
+
+ul.nav .navItem {
+    width: 100%;
+    text-align: center;
+}
+
+ul.nav .navLink {
+    display: block;
+    width: 100%;
+    line-height: 200%;
+    font-size: 3rem;
+    text-decoration: none;
+    color: white;
+}
+
+.burger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3.5rem;
+    padding: 10px;
+    color: white;
+    z-index: 1;
+    transition: .3s;
+}
+
+.fa-times {
+    display: none;
+}
+
+/* 2. Header  */
+header {
+    background-image: url(./img/container.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.headerWrapper {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+header .name {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+header .description {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: lighter;
+    text-align: center;
+    width: 100%;
+    margin: 20px;
+}
+
+/* 3. Main */
+main {
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+main h1,
+main h2 {
+    margin: 10px 0px;
+}
+
+main h1 {
+    font-size: 1.8rem;
+}
+
+main h2 {
+    font-size: 1.4rem;
+}
