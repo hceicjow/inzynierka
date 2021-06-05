@@ -1,6 +1,6 @@
 const bars = document.body.querySelector('.fa-bars')
 const times = document.body.querySelector('.fa-times')
-const navigation = document.body.querySelector('.navWrapper')
+const navigation = document.body.querySelector('.navWrapperMobile')
 
 bars.addEventListener('click', function () {
     bars.style.display = 'none';
