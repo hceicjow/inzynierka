@@ -252,11 +252,20 @@ img.footerLogo {
     /* 5.1 Navigation */
     .burger {
         display: none;
+
     }
 
     div.navWrapperDesktop {
         display: block;
+        position: relative;
+        top: -72px;
+        left: 0;
+        height: 75px;
+        width: 100%;
+        z-index: 999;
         color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-bottom: 3px black solid;
     }
 
     div.navWrapperMobile {
@@ -268,7 +277,6 @@ img.footerLogo {
         justify-content: flex-end;
         align-items: center;
         font-size: 2rem;
-        background-color: #000;
         height: 75px;
     }
 
@@ -286,13 +294,13 @@ img.footerLogo {
         letter-spacing: 1px;
         font-weight: bold;
         transition: .3s;
+        border-radius: 10px;
     }
 
     ul.navDesktop a.navLink:hover,
     ul.navDesktop a.active {
         color: black;
-        background-color: whitesmoke;
-        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     a.logoLink {
@@ -311,7 +319,7 @@ img.footerLogo {
     }
 
     .headerWrapper {
-        height: 70vh;
+        height: 80vh;
         background-color: rgba(0, 0, 0, 0.4);
 
     }
