@@ -269,7 +269,7 @@ img.footerLogo {
         align-items: center;
         font-size: 2rem;
         background-color: #000;
-        height: 75 px;
+        height: 75px;
     }
 
     ul.navDesktop li.navItem {
@@ -279,8 +279,20 @@ img.footerLogo {
     ul.navDesktop a.navLink {
         text-decoration: none;
         color: white;
-        padding: 20px 20px;
+        padding: 10px 10px;
         display: block;
+        margin-right: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: bold;
+        transition: .3s;
+    }
+
+    ul.navDesktop a.navLink:hover,
+    ul.navDesktop a.active {
+        color: black;
+        background-color: whitesmoke;
+        border-radius: 10px;
     }
 
     a.logoLink {
