@@ -68,6 +68,7 @@ ul.nav .navLink {
     color: white;
     z-index: 1;
     transition: .3s;
+    cursor: pointer;
 }
 
 .fa-times {
@@ -111,6 +112,7 @@ header .description {
 main {
     margin: 5px 5px 20px 5px;
     font-size: 1.4rem;
+    min-height: 50vh;
 }
 
 main h1,
