@@ -276,8 +276,11 @@ img.footerLogo {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        font-size: 2rem;
         height: 75px;
+
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
     }
 
     ul.navDesktop li.navItem {
@@ -290,9 +293,6 @@ img.footerLogo {
         padding: 10px 10px;
         display: block;
         margin-right: 20px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: bold;
         transition: .3s;
         border-radius: 10px;
     }
