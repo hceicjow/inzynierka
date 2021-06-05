@@ -14,7 +14,7 @@
     <nav>
         <i class="fas fa-bars burger"></i>
         <i class="fas fa-times burger notActive"></i>
-        <div class="navWrapper">
+        <div class="navWrapperMobile">
             <ul class="nav">
                 <li class="navItem"><a href="./index.html" class="navLink">Strona główna</a></li>
                 <li class="navItem"><a href="./partners.html" class="navLink">Partnerzy</a></li>
@@ -23,7 +23,20 @@
                 <li class="navItem"><a href="./contact.html" class="navLink">Kontakt</a></li>
             </ul>
         </div>
+        <div class="navWrapperDesktop">
+
+            <ul class="navDesktop">
+                <a href="./index.html" class="logoLink"><img src="./img/logo-ap-white-short.png" alt="logo"
+                        class="navLogo"></a>
+                <li class="navItem"><a href="./index.html" class="navLink">Strona główna</a></li>
+                <li class="navItem"><a href="./partners.html" class="navLink">Partnerzy</a></li>
+                <li class="navItem"><a href="./staff.html" class="navLink">Pracownicy</a></li>
+                <li class="navItem"><a href="./weather.html" class="navLink">Pogoda</a></li>
+                <li class="navItem"><a href="./contact.html" class="navLink">Kontakt</a></li>
+            </ul>
+        </div>
     </nav>
+    <nav class="desktop"></nav>
     <header>
         <div class="headerWrapper">
             <div class="name">Akademia Pomorska</div>
@@ -32,7 +45,7 @@
     </header>
     <main class="staff">
         <div class="mainWrapper">
-            <h1>Nasi pracownicy</h1>
+            <h1 class="staff">Nasi pracownicy</h1>
             <div class="staffCards">
                 <div class="employee"><img src="./img/staffPlaceholder.jpg" alt="staffImage" class="staffImage">
                     <div class="employeeInfo">
@@ -87,9 +100,6 @@
             <p> 76-200 Słupsk</p>
             <p>NIP 839 10 28 460</p>
             <p>REGON 000001459</p>
-        </div>
-        <div class="myInfo">
-            &copy; 2021 Wojciech Klimiuk
         </div>
     </footer>
     <script src="main.js"></script>
