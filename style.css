@@ -6,6 +6,7 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    font-size: 1.6rem;
 }
 
 * {
@@ -120,30 +121,52 @@ header .description {
 }
 
 /* 3. Main */
-main {
-    padding: 5px 5px 20px 5px;
-    font-size: 1.4rem;
+div.mainWrapper {
+    text-align: center;
 }
 
-main h1,
-main h2 {
-    margin: 20px 0;
-}
-
-main h1 {
+div.mainWrapper h1 {
+    margin: 15px 0;
     font-size: 2rem;
 }
 
-main h2 {
+div.mainWrapper h2 {
+    margin: 15px 0;
+    font-size: 1.8rem;
+}
+
+div.mainWrapper h3 {
     font-size: 1.6rem;
 }
 
-.home div {
-    margin: 5px;
+div.research {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
 }
 
-.home div div {
-    margin: 5px;
+div.research h2 {
+    order: -2;
+    width: 100%;
+}
+
+div.research p {
+    margin: 20px 0;
+}
+
+div.project {
+    background-color: #191919;
+    color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 4px 2px #000000;
+}
+
+img.researchImage {
+    order: -1;
+    max-width: 100%;
+    height: auto;
 }
 
 /* 3.1 Staff */
@@ -348,29 +371,47 @@ img.footerLogo {
     }
 
     /* 5.3 Main  */
-    main {
-        padding: 0px 30px 50px 30px;
-        font-size: 1.6rem;
+    div.mainWrapper {
+        margin: 0 auto 50px auto;
     }
 
-    main h1,
-    main h2 {
-        margin: 20px 0;
-    }
-
-    main h1 {
+    div.mainWrapper h1 {
         font-size: 3rem;
+        margin: 40px 0;
     }
 
-    main h2 {
+    div.mainWrapper h2 {
         font-size: 2rem;
+        margin: 40px 0;
     }
 
-    .home div {
-        margin: 30px;
+    div.research {
+        flex-direction: row;
+        justify-content: stretch;
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 40px 0 40px;
     }
 
-    .home div div {
-        margin: 30px;
+    img.researchImage {
+        order: -1;
+        width: 45%;
+        box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 0px 0px 4px 2px rgba(0, 0, 0, 0);
+    }
+
+    div.research p.ImageAdjustment {
+        order: -2;
+        width: 45%;
+        margin: 20px 50px 20px 0;
+    }
+
+    div.project {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    div.project h2 {
+        margin: 5px 0;
     }
 }
