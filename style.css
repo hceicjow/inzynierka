@@ -3,6 +3,7 @@ html {
 }
 
 body {
+
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -125,17 +126,17 @@ div.mainWrapper {
     text-align: center;
 }
 
-div.mainWrapper h1 {
+main h1 {
     margin: 15px 0;
     font-size: 2rem;
 }
 
-div.mainWrapper h2 {
-    margin: 15px 0;
+main h2 {
+    margin: 5px 0;
     font-size: 1.8rem;
 }
 
-div.mainWrapper h3 {
+main h3 {
     font-size: 1.6rem;
 }
 
@@ -167,6 +168,7 @@ img.researchImage {
     order: -1;
     max-width: 100%;
     height: auto;
+    margin: 10px auto;
     box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 0px 0px 4px 2px rgba(0, 0, 0, 0);
 }
 
@@ -376,34 +378,37 @@ img.footerLogo {
         margin: 0 auto 50px auto;
     }
 
-    div.mainWrapper h1 {
+    main h1 {
         font-size: 3rem;
         margin: 40px 0;
     }
 
-    div.mainWrapper h2 {
+    main h2 {
         font-size: 2rem;
-        margin: 40px 0;
+        margin: 20px 0;
     }
 
     div.research {
         flex-direction: row;
-        justify-content: stretch;
+        justify-content: flex-start;
         width: 80%;
         margin: 0 auto;
         padding: 20px 40px 0 40px;
+        line-height: 150%;
     }
 
     img.researchImage {
         order: -1;
         width: 45%;
+        object-fit: cover;
+        height: auto;
+        margin: 30px;
 
     }
 
-    div.research p.ImageAdjustment {
+    div.reasearchTextImage {
         order: -2;
         width: 45%;
-        margin: 20px 50px 20px 0;
     }
 
     div.project {
