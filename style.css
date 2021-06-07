@@ -167,6 +167,7 @@ img.researchImage {
     order: -1;
     max-width: 100%;
     height: auto;
+    box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 0px 0px 4px 2px rgba(0, 0, 0, 0);
 }
 
 /* 3.1 Staff */
@@ -396,7 +397,7 @@ img.footerLogo {
     img.researchImage {
         order: -1;
         width: 45%;
-        box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 0px 0px 4px 2px rgba(0, 0, 0, 0);
+
     }
 
     div.research p.ImageAdjustment {
