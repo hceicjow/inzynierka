@@ -423,9 +423,6 @@ img.footerLogo {
         order: 0;
     }
 
-    /* div.research:nth-child('odd')>img.researchImage {
-        order: -2;
-    } */
     #project {
         width: 100%;
         flex-direction: column;
