@@ -10,11 +10,11 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
 }
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', 'Arial', sans-serif;
 }
@@ -44,7 +44,7 @@ nav.mobile {
     transition: .3s;
 }
 
-ul.nav {
+/* ul.nav {
     display: flex;
     flex-grow: 0;
     width: 100%;
@@ -54,7 +54,8 @@ ul.nav {
     align-items: center;
     list-style: none;
     background-color: black;
-}
+    margin: 0;
+} */
 
 ul.nav .navItem {
     width: 100%;
@@ -248,6 +249,43 @@ div.partnerDescription {
     text-align: center;
 }
 
+/* 3.4 Weather */
+.weatherContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    border: black 1px solid;
+    line-height: 250%;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    background-image: url(./img/clouds.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.wOverlay {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 2rem;
+}
+
+p.weatherTitle {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.ic {
+    position: relative;
+    top: 13px;
+    left: 0;
+}
+
 /* 4. Footer */
 
 footer {
@@ -313,6 +351,7 @@ img.footerLogo {
         font-size: 1.8rem;
         font-weight: bold;
         text-transform: uppercase;
+        margin: 0;
     }
 
     ul.navDesktop li.navItem {
@@ -438,5 +477,10 @@ img.footerLogo {
 
     div.project p {
         margin: 5px 0;
+    }
+
+    .weatherContainer {
+        flex-direction: row;
+        justify-content: center;
     }
 }

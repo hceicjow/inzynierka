@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inżynierka</title>
     <link rel="stylesheet" href="./font awesome/fontawesome-free-5.15.3-web/css/all.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -43,6 +44,31 @@
         </div>
     </header>
     <main>
+        <div class="weatherContainer">
+
+            <div class="weather">
+                <div class="wOverlay">
+                    <p class=weatherTitle>Wczoraj</p>
+                    <p class="temp1">Temperatura: <img src="" alt="ikona" class="icon1 ic"> </p>
+                    <p class="humidity1">Wilgotność powietrza: </p>
+                </div>
+            </div>
+            <div class="weather">
+                <div class="wOverlay">
+                    <p class=weatherTitle>Dzisiaj</p>
+                    <p class="temp">Temperatura: <img src="" alt="ikona" class="icon ic"> </p>
+                    <p class="humidity">Wilgotność powietrza: </p>
+                </div>
+            </div>
+            <div class="weather">
+                <div class="wOverlay">
+                    <p class=weatherTitle>Jutro</p>
+                    <p class="temp2">Temperatura: <img src="" alt="ikona" class="icon2 ic"> </p>
+                    <p class="humidity2">Wilgotność powietrza: </p>
+                </div>
+            </div>
+
+        </div>
 
     </main>
     <footer>
@@ -54,9 +80,44 @@
             <p>NIP 839 10 28 460</p>
             <p>REGON 000001459</p>
         </div>
+        </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="main.js"></script>
+    <script>
+        const apiToday =
+            'https://api.openweathermap.org/data/2.5/onecall?&units=metric&lat=54.45253404870594&lon=17.04246358214228&exclude=hourly,minutely&appid=a5966f51aa7fd53c55392fc558117062';
+        $.getJSON(apiToday, function (data) {
+            const icon = "http://openweathermap.org/img/w/" + data.current.weather[0].icon + ".png";
+            const icon1 = "http://openweathermap.org/img/w/" + data.daily[1].weather[0].icon + ".png";
+            const temp = data.current.temp;
+            const temp1 = data.daily[1].temp.day;
+            const humidity = data.current.humidity;
+            const humidity1 = data.daily[1].humidity;
+            $('.icon').attr('src', icon)
+            $('.icon2').attr('src', icon1)
+            $('.temp').append(temp + "&#176;C");
+            $('.temp2').append(temp1 + "&#176;C");
+            $('.humidity').append(humidity);
+            $('.humidity2').append(humidity1);
+        })
+        let unixTime = Date.now() / 1000
+        let yesterday = Math.round(unixTime - 86400);
 
+        const apiYesterday =
+            'https://api.openweathermap.org/data/2.5/onecall/timemachine?&units=metric&lat=54.45253404870594&lon=17.04246358214228&&appid=a5966f51aa7fd53c55392fc558117062&dt=' +
+            yesterday;
+        $.getJSON(apiYesterday, function (data1) {
+            const icon = "http://openweathermap.org/img/w/" + data1.current.weather[0].icon + ".png";
+            const temp = data1.current.temp;
+            const humidity = data1.current.humidity;
+            const pressure = data1.current.sunrise;
+            $('.icon1').attr('src', icon)
+            $('.temp1').append(temp + "&#176;C");
+            $('.humidity1').append(humidity);
+        })
+    </script>
 </body>
 
 </html>
