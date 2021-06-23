@@ -254,7 +254,7 @@ div.partnerDescription {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
+    gap: 4rem;
     padding: 2rem;
 }
 
