@@ -50,21 +50,24 @@
                 <div class="wOverlay">
                     <p class=weatherTitle>Wczoraj</p>
                     <p class="temp1">Temperatura: <img src="" alt="ikona" class="icon1 ic"> </p>
-                    <p class="humidity1">Wilgotność powietrza: </p>
+                    <p class="humidity1">Wilgotność: </p>
+                    <p class="wind1">Prędkośc wiatru: </p>
                 </div>
             </div>
             <div class="weather">
                 <div class="wOverlay">
                     <p class=weatherTitle>Dzisiaj</p>
                     <p class="temp">Temperatura: <img src="" alt="ikona" class="icon ic"> </p>
-                    <p class="humidity">Wilgotność powietrza: </p>
+                    <p class="humidity">Wilgotność: </p>
+                    <p class="wind">Prędkośc wiatru: </p>
                 </div>
             </div>
             <div class="weather">
                 <div class="wOverlay">
                     <p class=weatherTitle>Jutro</p>
                     <p class="temp2">Temperatura: <img src="" alt="ikona" class="icon2 ic"> </p>
-                    <p class="humidity2">Wilgotność powietrza: </p>
+                    <p class="humidity2">Wilgotność: </p>
+                    <p class="wind2">Prędkośc wiatru: </p>
                 </div>
             </div>
 
@@ -95,12 +98,16 @@
             const temp1 = data.daily[1].temp.day;
             const humidity = data.current.humidity;
             const humidity1 = data.daily[1].humidity;
+            const wind = data.current.wind_speed;
+            const wind1 = data.daily[1].wind_speed;
             $('.icon').attr('src', icon)
             $('.icon2').attr('src', icon1)
             $('.temp').append(temp + "&#176;C");
             $('.temp2').append(temp1 + "&#176;C");
-            $('.humidity').append(humidity);
-            $('.humidity2').append(humidity1);
+            $('.humidity').append(" " + humidity + " %");
+            $('.humidity2').append(" " + humidity1 + " %");
+            $('.wind').append(" " + wind + " m/s");
+            $('.wind2').append(" " + wind1 + " m/s");
         })
         let unixTime = Date.now() / 1000
         let yesterday = Math.round(unixTime - 86400);
@@ -113,9 +120,11 @@
             const temp = data1.current.temp;
             const humidity = data1.current.humidity;
             const pressure = data1.current.sunrise;
+            const wind = data1.current.wind_speed;
             $('.icon1').attr('src', icon)
             $('.temp1').append(temp + "&#176;C");
-            $('.humidity1').append(humidity);
+            $('.humidity1').append(" " + humidity + " %");
+            $('.wind1').append(" " + wind + " m/s");
         })
     </script>
 </body>
